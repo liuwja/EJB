@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/ejb-client/ejb-client.iml" filepath="$PROJECT_DIR$/ejb-client/ejb-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/ejb-demo.iml" filepath="$PROJECT_DIR$/ejb-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/ejb-server/ejb-server.iml" filepath="$PROJECT_DIR$/ejb-server/ejb-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/entity-bean/entity-bean.iml" filepath="$PROJECT_DIR$/entity-bean/entity-bean.iml" />
     </modules>
   </component>
 </project>
