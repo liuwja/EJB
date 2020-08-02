@@ -1,5 +1,8 @@
 package com.liuwjg;
 
+import com.liuwjg.bean.Person;
+import com.liuwjg.service.PersonService;
+
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import java.util.Properties;
@@ -14,9 +17,11 @@ public class EjbClient {
         try {
             InitialContext ctx = new InitialContext(pro);
             System.out.println(ctx.getClass().getName());
-             IHelloWorld helloWorld = (IHelloWorld) ctx.lookup("HelloWorldEJB/remote");
-            System.out.println(helloWorld.getClass().getName());
-            System.out.println(helloWorld.sayHello("liuwjg"));
+            PersonService personService = (PersonService) ctx.lookup("PersonServiceImpl/remote");
+            Person person = new Person();
+            person.setName("刘伟杰");
+            personService.save(person);
+            System.out.println(person.getName());
         } catch (NamingException e) {
             e.printStackTrace();
         }
